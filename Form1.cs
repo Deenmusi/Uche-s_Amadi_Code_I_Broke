@@ -79,7 +79,7 @@ namespace Lab5
                     grpLogin.Enabled = false;
                     break;
                 }
-                else if (attempts === 3)
+                else if (attempts == 3)
                 {
                     MessageBox.Show(attempts.ToString() + " Attempts to login. \n Account locked - Closing programm.", PROGRAMMER);
                     this.Close();
@@ -190,7 +190,7 @@ namespace Lab5
 
             if (first && second)
             {
-                return true,
+                return true;
             }
             else
                 return false;
@@ -240,7 +240,7 @@ namespace Lab5
             
             for (int i = 0; i < nudHowMany.Value; i+= 1)
             {
-                int ranNum = r.Next(1000, 1001);
+                int ranNum = r.Next(1000, 5001);
                 lstNumbers.Items.Add(ranNum.ToString());
             }
 
@@ -261,7 +261,7 @@ namespace Lab5
             int i = 0, result = 0;
             while (i < lstNumbers.Items.Count)
             {
-                result += Convert.ToInt32(lstNumbers.Items[i++]):
+                result += Convert.ToInt32(lstNumbers.Items[i++]);
             }
             lblDisplaySum.Text = result.ToString("N0");
             return result;
